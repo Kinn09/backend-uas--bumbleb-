@@ -1,4 +1,29 @@
 GET http://localhost:5000/tempat 
 
 ###
-GET http://localhost:5000/tempat/1
+GET http://localhost:5000/tempatt/3
+
+###
+POST http://localhost:5000/tempatt
+Content-Type: application/json
+
+{
+    "nama": "Bunaken",
+    "alamat": "Manado, Sulawesi Utara",
+    "deskripsi": "Bunaken adalah sebuah pulau seluas 8,08 km² di Teluk Manado, yang terletak di utara pulau Sulawesi, Indonesia. Pulau ini merupakan bagian dari kota Manado, ibu kota provinsi Sulawesi Utara, Indonesia.",
+    "biayamasuk": "150000"
+}
+
+###
+PATCH http://localhost:5000/tempatt/3
+Content-Type: application/json
+
+{
+    "nama": "Taman Nasional Bunaken",
+    "alamat": "Manado, Sulawesi Utara",
+    "deskripsi": "Bunaken adalah sebuah pulau seluas 8,08 km² di Teluk Manado, yang terletak di utara pulau Sulawesi, Indonesia. Pulau ini merupakan bagian dari kota Manado, ibu kota provinsi Sulawesi Utara, Indonesia.",
+    "biayamasuk": "150000"
+}
+
+###
+DELETE http://localhost:5000/tempatt/3
