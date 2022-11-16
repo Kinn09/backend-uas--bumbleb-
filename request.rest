@@ -1,0 +1,4 @@
+GET http://localhost:5000/tempat 
+
+###
+GET http://localhost:5000/tempat/1

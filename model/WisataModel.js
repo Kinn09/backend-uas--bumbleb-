@@ -7,7 +7,7 @@ const Wisata = db.define("Tempat", {
     nama: DataTypes.STRING,
     alamat: DataTypes.STRING,
     deskripsi: DataTypes.STRING,
-    biayaMasuk: DataTypes.INTEGER,
+    biayamasuk: DataTypes.INTEGER,
 }, {
     freezeTableName: true
 });
