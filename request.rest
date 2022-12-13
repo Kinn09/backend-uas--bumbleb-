@@ -8,10 +8,7 @@ POST http://localhost:5000/tempat
 Content-Type: application/json
 
 {
-    "nama": "Bunaken",
-    "alamat": "Manado, Sulawesi Utara",
-    "deskripsi": "Bunaken adalah sebuah pulau seluas 8,08 km² di Teluk Manado, yang terletak di utara pulau Sulawesi, Indonesia. Pulau ini merupakan bagian dari kota Manado, ibu kota provinsi Sulawesi Utara, Indonesia.",
-    "biayamasuk": "150000"
+    "nama": "Wisata"
 }
 
 ###

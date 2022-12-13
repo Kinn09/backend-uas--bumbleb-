@@ -1,10 +1,10 @@
 import { Sequelize } from "sequelize";
-import db from "../config/database.js";
+import db from "../config/Database.js";
 
 const { DataTypes } = Sequelize;
 
 const Wisata = db.define(
-    "tempat",
+    "wisata",
     {
       uuid: {
         type: DataTypes.STRING,
@@ -22,39 +22,10 @@ const Wisata = db.define(
           len: [3, 100],
         },
       },
-      biayamasuk: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-        },
-      },
- 
-      alamat: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-          len: [3, 100],
-        },
-      },
-      deskripsi: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-        },
-      },
-      image: DataTypes.STRING,
-      url: DataTypes.STRING,
     },
     {
-      freezeTableName: true
+      freezeTableName: true,
     }
   );
 
 export default Wisata;
-
-(async () => {
-    await db.sync();
-})();
