@@ -23,13 +23,7 @@ const Lokasi = db.define(
           len: [3, 100],
         },
       },
-      biayamasuk: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-        },
-      },
+
  
       alamat: {
         type: DataTypes.STRING,
@@ -41,6 +35,13 @@ const Lokasi = db.define(
       },
       deskripsi: {
         type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          notEmpty: true,
+        },
+      },
+      biayamasuk: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
           notEmpty: true,

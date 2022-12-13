@@ -28,7 +28,7 @@ export const createLokasi = (req, res) => {
     // INSERT INTO Wisata VALUES 
     if (req.files === null || req.files === undefined)
       return res.status(400).json({ msg: "No File Uploaded" });
-    const { nama, alamat, deskripsi, biayamasuk } = req.body;
+    const { nama, alamat, deskripsi, biayamasuk, wisataId } = req.body;
     const file = req.files.file;
     const fileSize = file.data.length;
     const ext = path.extname(file.name);
@@ -51,6 +51,7 @@ export const createLokasi = (req, res) => {
           biayamasuk: biayamasuk,
           image: fileName,
           url: url,
+          wisataId: wisataId,
         });
         res.status(201).json({ msg: "Lokasi Created Successfuly" });
       } catch (error) {
@@ -90,12 +91,12 @@ export const createLokasi = (req, res) => {
         if (err) return res.status(500).json({ msg: err.message });
       });
     }
-    const { nama, alamat, deskripsi, biayamasuk } = req.body;
+    const { nama, alamat, deskripsi, biayamasuk, wisataId } = req.body;
     const url = `${req.protocol}://${req.get("host")}/images/${fileName}`;
   
     try {
       await Lokasi.update(
-        { nama: nama, alamat: alamat, deskripsi: deskripsi,biayamasuk: biayamasuk,image: fileName, url: url,  },
+        { nama: nama, alamat: alamat, deskripsi: deskripsi,biayamasuk: biayamasuk,wisataId: wisataId, image: fileName, url: url,  },
         {
           where: {
             id: req.params.id,

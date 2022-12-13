@@ -13,7 +13,7 @@ const router = express.Router();
 router.get("/lokasis", getLokasi);
 router.get("/lokasi/:id", getLokasiById);
 router.post("/lokasi", createLokasi);
-router.patch("/lokasi/:ig",updateLokasi)
+router.patch("/lokasi/:id",updateLokasi)
 router.delete("/lokasi/:id", deleteLokasi);
 router.get("/location", getLocation);
 
