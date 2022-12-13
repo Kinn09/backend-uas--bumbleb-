@@ -4,15 +4,15 @@ import {
     getTempatById,
     createTempat,
     updateTempat,
-    deleteTempat
+    deleteTempat,
 } from "../controller/TempatWisata.js";
 
 const router = express.Router();
 
-router.get("/tempat", getTempat);
-router.get("/tempatt/:id", getTempatById);
-router.post("/tempatt", createTempat);
-router.patch("/tempatt/:id", updateTempat);
-router.delete("/tempatt/:id", deleteTempat);
+router.get("/tempats", getTempat);
+router.get("/tempat/:id", getTempatById);
+router.post("/tempat", createTempat);
+router.patch("/tempat/:id", updateTempat);
+router.delete("/tempat/:id", deleteTempat);
 
 export default router;

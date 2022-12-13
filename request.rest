@@ -1,10 +1,10 @@
-GET http://localhost:5000/tempat 
+GET http://localhost:5000/tempatt
 
 ###
-GET http://localhost:5000/tempatt/3
+GET http://localhost:5000/tempat/3
 
 ###
-POST http://localhost:5000/tempatt
+POST http://localhost:5000/tempat
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:5000/tempatt/3
+PATCH http://localhost:5000/tempat/1
 Content-Type: application/json
 
 {
