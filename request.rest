@@ -1,7 +1,7 @@
 GET http://localhost:5000/tempatt
 
 ###
-GET http://localhost:5000/tempat/3
+GET http://localhost:5000/lokasi/6
 
 ###
 POST http://localhost:5000/tempat
@@ -24,3 +24,6 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/tempatt/3
+
+
+
